@@ -13,7 +13,7 @@ theme = 'hugo-theme-stack'
   [params.sidebar]
     emoji = '😋'
     subtitle = '身を浅く思ひ、世を深く思ふ。'
-    avatar = 'img/avatar.svg'
+    avatar = 'img/avatar.jpg'
 
   [params.article]
     toc = true
