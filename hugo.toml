@@ -1,0 +1,55 @@
+baseURL = 'https://goodgirl.mizuharahifumi.top/'
+locale = 'ja-JP'
+defaultContentLanguage = 'ja'
+hasCJKLanguage = true
+title = 'Hifumiのブログ'
+theme = 'hugo-theme-stack'
+
+[params]
+  description = '身を浅く思ひ、世を深く思ふ。'
+  mainSections = ['posts']
+  rssFullContent = true
+
+  [params.sidebar]
+    emoji = '😋'
+    subtitle = '身を浅く思ひ、世を深く思ふ。'
+    avatar = 'img/avatar.svg'
+
+  [params.article]
+    toc = true
+    readingTime = true
+
+  [params.widgets]
+    homepage = [
+      { type = 'search' },
+      { type = 'archives', params = { limit = 8 } },
+      { type = 'categories', params = { limit = 8 } },
+    ]
+    page = [{ type = 'toc' }]
+
+  [params.colorScheme]
+    toggle = true
+    default = 'auto'
+
+  [params.footer]
+    since = 2026
+    customText = 'All rights reserved.'
+
+  # コメントサービスを選ぶまで無効にします。
+  [params.comments]
+    enabled = false
+
+[[menu.main]]
+  identifier = 'archives'
+  name = 'アーカイブ'
+  url = '/archives/'
+  weight = 10
+
+# GitHub のユーザー名が決まったら URL の YOUR_GITHUB_ID を置き換えてください。
+[[menu.social]]
+  identifier = 'github'
+  name = 'GitHub'
+  url = 'https://github.com/HifumiMizuhara'
+
+  [menu.social.params]
+    icon = 'brand-github'
