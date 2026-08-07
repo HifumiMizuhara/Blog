@@ -40,6 +40,14 @@ theme = 'hugo-theme-stack'
   [params.comments]
     enabled = false
 
+# KaTeX の区切り記号内を Markdown として解釈せず、そのまま出力する。
+[markup.goldmark.extensions.passthrough]
+  enable = true
+
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\\[', '\\]'], ['$$', '$$']]
+    inline = [['\\(', '\\)']]
+
 [[menu.main]]
   identifier = 'archives'
   name = 'アーカイブ'

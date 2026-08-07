@@ -17,19 +17,19 @@ $$
 ### 積の微分公式に注目せよ
 
 $$
-\{f(x)g(x)\}' = f'(x)g(x) + f(x)g'(x)
+\{f(x)g(x)\}^{\prime} = f^{\prime}(x)g(x) + f(x)g^{\prime}(x)
 $$
 
 ここで $f(x):=e^x$ とすると
 
 $$
-\left\{e^x g(x)\right\}'
-= e^x\left\{g(x)+g'(x)\right\}
+\left\{e^x g(x)\right\}^{\prime}
+= e^x\left\{g(x)+g^{\prime}(x)\right\}
 $$
 
 $$
 \text{i.e.}\quad
-\int e^x\left\{g(x)+g'(x)\right\}\,dx
+\int e^x\left\{g(x)+g^{\prime}(x)\right\}\,dx
 = e^x g(x)+C
 \qquad
 \text{（ただし、\(C\) は積分定数）}
@@ -38,12 +38,12 @@ $$
 これをさらに一般化すると
 
 $$
-\left\{e^{ax}g(x)\right\}'
-= e^{ax}\left\{ag(x)+g'(x)\right\}
+\left\{e^{ax}g(x)\right\}^{\prime}
+= e^{ax}\left\{ag(x)+g^{\prime}(x)\right\}
 $$
 $$
 \text{i.e.}\quad
-\int e^{ax}\left\{ag(x)+g'(x)\right\}\,dx
+\int e^{ax}\left\{ag(x)+g^{\prime}(x)\right\}\,dx
 = e^{ax}g(x)+C
 \qquad
 \text{（ただし、\(C\) は積分定数）}
@@ -51,7 +51,7 @@ $$
 
 つまり
 
-$\frac{(1+\sin x)}{1+\cos x}$ を $g(x)+g'(x)$ の形にできれば、積分できるということ。
+$\frac{(1+\sin x)}{1+\cos x}$ を $g(x)+g^{\prime}(x)$ の形にできれば、積分できるということ。
 
 ### Weierstrass 置換
 
@@ -72,25 +72,25 @@ $$
 
 $$
 \frac{1+\sin x}{1+\cos x}
-=
+{}=
 \frac{1+\frac{2t}{1+t^2}}
      {1+\frac{1-t^2}{1+t^2}}
-=
+{}=
 \frac{t^2+2t+1}{2}
-=
+{}=
 \frac{t^2}{2}+t+\frac{1}{2}
 $$
 
 ここで考えるのは $\tan$ の微分法。
 
 $$
-(\tan x)'=\sec^2 x
+(\tan x)^{\prime}=\sec^2 x
 $$
 
 $$
 \therefore\quad
-\left(\tan\frac{x}{2}\right)'
-=
+\left(\tan\frac{x}{2}\right)^{\prime}
+{}=
 \frac{1}{2}\sec^2\frac{x}{2}
 $$
 
@@ -103,10 +103,10 @@ $$
 $$
 \therefore\quad
 \frac{1}{2}\sec^2\frac{x}{2}
-=
+{}=
 \frac{1}{2}
 +\frac{1}{2}\tan^2\frac{x}{2}
-=
+{}=
 \frac{1}{2}
 +\frac{1}{2}t^2
 $$
@@ -118,7 +118,7 @@ $$
 \left\{
 \tan\frac{x}{2}
 +
-\left(\tan\frac{x}{2}\right)'
+\left(\tan\frac{x}{2}\right)^{\prime}
 \right\}
 \,dx
 $$
