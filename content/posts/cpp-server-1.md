@@ -11,13 +11,13 @@ Pythonなどでならコマンド1行だけ打てば立ち上げられるHTTPサ
 
 このシリーズでは、次のような最小構成のHTTPサーバを目指して行く流れとなります。
 
-![](http-server-eg.png)
+{{< asset-image src="img/http-server-eg.png" alt="最小構成のHTTPサーバの構成図" >}}
 
 ### ソケット
 
 ソケットは、ネットワーク通信のための「通信口」と考えられます。電話の喩えで考えるなら、IPアドレスとポートは「電話番号」、そしてソケットは「受話器」の役割にあたります。
 
-![](http-server-socket-phone.png)
+{{< asset-image src="img/http-server-socket-phone.png" alt="ソケットを受話器にたとえた図" >}}
 
 *By GPT Image 2*
 
@@ -30,7 +30,7 @@ Windowsでソケットを扱いたい場合、`WinSock2.h`というライブラ�
 
 RAIIは「Resource Acquisition Is Initialization」（リソース獲得は初期化である）の略記で、リソースの初期化とクリーンアップをオブジェクトの寿命に紐づけることで、非常に賢くかつ簡単にそれを管理できてしまうという手法です。
 
-![alt text](http-server-raii.png)
+{{< asset-image src="img/http-server-raii.png" alt="RAIIによるWinSockの初期化と終了処理の図" >}}
 
 C++のオブジェクトは初期化時必ずその **コンストラクタ** を呼び出し、破棄時必ずその **デストラクタ** を呼び出すようにできています。よって `WSAStartUp` をオブジェクトのコンストラクタ内で呼び出し、`WSACleanup()`を同オブジェクトのデストラクタ内で呼び出せば、オブジェクトの寿命が終わるのと同時に必ずきれいにクリーンアップされます。
 
