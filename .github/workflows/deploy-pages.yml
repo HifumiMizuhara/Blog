@@ -29,6 +29,10 @@ jobs:
           hugo-version: '0.164.0'
           extended: true
 
+      - name: Validate display math syntax
+        shell: pwsh
+        run: ./scripts/check-display-math.ps1
+
       - name: Build site
         run: hugo --gc --minify
 
